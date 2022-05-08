@@ -1,0 +1,32 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #000;
+    border-collapse: separate;
+    border-spacing: 70px 10px;
+}
+
+.table__user {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s opacity ease-in-out;
+    margin-bottom: 30px;
+}
+
+.table__user:hover {
+    opacity: 0.8;
+}
+
+.table__user:last-of-type {
+    margin-bottom: 0;
+}
+
+.table-string {
+    text-align: center;
+}
+
+.table-string {
+    margin: 0;
+}

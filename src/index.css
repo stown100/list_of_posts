@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  margin: 0 auto;
+}
+
+
+@import url(components/Header/Header.css);
+@import url(components/Form/form.css);
+@import url(pages/main.css);
+@import url(components/UserList/user-list.css);
