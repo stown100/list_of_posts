@@ -2,7 +2,7 @@
 //     type: 'SET_SORT_BY',
 //     payload: name,
 // })
-export const setPostUsers = (postIndex) => ({
-    type: 'SET_POST_USERS',
-    payload: postIndex,
+export const setSortUsers = (name) => ({
+    type: 'SET_SORT_BY',
+    payload: name,
 })

@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Получение данных с сервера
 export const fetchUsers = (sortBy, category) => (dispatch) => {
-    axios.get('https://jsonplaceholder.typicode.com/posts').then(({data}) => {
+    axios.get(`https://jsonplaceholder.typicode.com/posts`).then(({data}) => {
         dispatch(setUsers(data))
     })
 }

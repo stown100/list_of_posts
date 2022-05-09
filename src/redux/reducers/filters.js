@@ -1,15 +1,15 @@
 const initialState = {
-    postUser: {
-        type: 'body.length',
-        order: 'desc'
+    sortBy: {
+        type: 'id',
+        id: 0,
     },
 }
 
 const filters = (state = initialState, action) => {
-    if (action.type === 'SET_POST_USERS') {
+    if (action.type === 'SET_SORT_BY') {
         return {
             ...state,
-            postUser: action.payload,
+            sortBy: action.payload,
         }
     }
     return state;

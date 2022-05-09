@@ -20,4 +20,4 @@ code {
 @import url(components/Header/Header.css);
 @import url(components/Form/form.css);
 @import url(pages/main.css);
-@import url(components/UserList/user-list.css);
+@import url(components/UserList/Table/table.css);

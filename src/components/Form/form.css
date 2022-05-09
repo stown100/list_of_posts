@@ -1,4 +1,5 @@
 .form {
+    display: flex;
     text-align: start;
     padding: 50px 0 30px;
 }
@@ -13,4 +14,49 @@
 .form__select-sort {
     padding: 10px;
     border-radius: 5px;
+}
+
+.sort-option {
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s opacity ease-in-out;
+    list-style-type: none;
+    /* visibility: visible; */
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.sort-option:hover {
+    opacity: 0.6;
+}
+
+.sort-option_hidden {
+    display: none;
+    opacity: 0;
+    /* visibility: hidden; */
+    opacity: 0;
+    list-style-type: none;
+    transition: visibility 0.5s, opacity 0.5s ease-in-out;
+}
+
+.sort-option__img {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    transform: rotate(0.5turn);
+}
+
+.sort-option__img_top {
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+.form__select-sort {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px 10px 0 10px;
+    margin: 0;
+    box-shadow: 0 5px 5px #686868;
+    overflow: hidden;
 }
