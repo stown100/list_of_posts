@@ -1,23 +1,32 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import Form from '../components/Form/Form';
 import PostList from '../components/PostList/PostList';
-import { fetchUsers } from '../redux/actions/users';
 
-function Posts() {
-    const dispatch = useDispatch();
-    const items = useSelector(({ users }) => users.items);
+function Posts({ search, handleChange, searchText, sortItems, onSelectSortBody }) {
 
-    React.useEffect(() => {
-        dispatch(fetchUsers())
-    }, [])
     return (
-        <div className='main'>
-            {items.length !== 0
-                ? items.map((obj) =>
-                    <PostList {...obj} key={obj.id} />
-                )
-                : console.log('error')
-            }
+        <div className='posts'>
+            <Form items={sortItems} search={search} handleChange={handleChange} onClickSortIndex={(id) => onSelectSortBody(id)} />
+            <table className='table'>
+                <thead>
+                    <tr className='table__titles'>
+                        <th className='table-title'>Пользователь</th>
+                        <th className='table-title'>Пост</th>
+                    </tr>
+                </thead>
+                {searchText.length !== 0
+                    ? searchText.map((obj) =>
+                        <PostList {...obj} key={obj.id} />
+                    )
+                    :
+                    <tbody>
+                        <tr className='table__strings'>
+                            <td></td>
+                            <td className='table-string_active'>Такого поста нет</td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
         </div>
     )
 }

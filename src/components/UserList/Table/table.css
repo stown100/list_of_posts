@@ -1,5 +1,6 @@
   table {
     border: 1px solid #69c;
+    width: 80%;
   }
   th {
     font-weight: normal;
@@ -11,11 +12,25 @@
     border-top: 1px dashed white;
     padding: 10px 70px;
     background:#ccddff;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
   tr:hover td {
     background: #99bcff;
     cursor: pointer;
+  }
+
+  @media (min-width: 320px) and (max-width: 675px) {
+    table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    th {
+        text-align: start;
+        padding: 6px 4px;
+        font-size: 14px;
+    }
+      td {
+          padding: 2px 4px;
+          font-size: 12px;
+      }
   }

@@ -5,6 +5,10 @@
     box-shadow: 0px 1px 5px rgb(59, 59, 59);
 }
 
+.header__logo {
+    height: 53px;
+}
+
 .list {
     list-style-type: none;
     display: flex;

@@ -34,11 +34,11 @@ function Form({ search, handleChange, items, onClickSortIndex }) {
     }
 
     return (
-        <div className='form'>
+        <div className={`${onSelect ? 'form_active' : 'form'}`}>
             <input className='form__input-search' type="text" value={search} onChange={handleChange} placeholder='Поиск по заголовку'></input>
             <ul className='form__select-sort'>
                 <li className='sort-option' onClick={selectOpen} ref={sortRef}>
-                    Сортировать по
+                    Сортировать
                     <img className={`${onSelect ? 'sort-option__img' : 'sort-option__img_top'}`} src={arrow} alt='arrow' />
                 </li>
                 {items && items.map((item, index) => {

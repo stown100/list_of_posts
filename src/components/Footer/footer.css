@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 5px 1px 5px rgb(59, 59, 59);
+
+}
+
+.list__li-img {
+    width: 46px;
+    height: 46px;
+    margin-right: 10px;
+}

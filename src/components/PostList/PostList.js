@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 function PostList(obj) {
     return (
-        <div className='user-list' title={`Посты пользователя ${Object.values(obj)[0]}`}>
-            <h3 className='user-list__name'>{Object.values(obj)[3]}</h3>
-        </div>
+        <tbody>
+            <tr className='table__strings'>
+                <td className='table-string table-string-email' title={obj.email}>{obj.email}</td>
+                <td className='table-string table-string-name' title={obj.body}>{obj.body}</td>
+            </tr>
+        </tbody>
     )
 }
 
